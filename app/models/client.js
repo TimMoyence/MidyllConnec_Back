@@ -3,6 +3,14 @@ import pg from 'pg';
 
 const debug = Debug('mydillConnect:database');
 
+// const { Pool } = pg;
+
+// const client = new Pool({
+//   connectionString: process.env.DATABASE_URL,
+// });
+
+// export default client;
+
 const { Pool } = pg;
 
 const client = new Pool();
