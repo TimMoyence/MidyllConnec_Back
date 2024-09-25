@@ -13,5 +13,5 @@ const server = createServer(app);
 if (process.env.NODE_ENV === 'development') {
   server.listen(3000, () => debug(`API launched on http://localhost:${3000}`));
 } else if (process.env.NODE_ENV === 'production') {
-  server.listen(3000, () => debug(`API launched on http://localhost:${3000}`));
+  server.listen(80, () => debug(`API launched on http://localhost:${80}`));
 }

@@ -3,7 +3,6 @@ import jwt from 'jsonwebtoken';
 import passport from 'passport';
 import authDataMapper from '../models/auth.dataMapper.js';
 import isValidEmail from '../services/emailService.js';
-import registerMailer from '../services/services.mailer/register.mailer.js';
 
 /**
  * @typedef {object} UserInput
