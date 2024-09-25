@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Confirmation de Paiement - Carte Cadeau</title>
+<style type="text/css">
+  body {
+    font-family: cursive;
+    color: rgb(7, 52, 27);
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+  }
+  .email-container {
+    max-width: 600px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #dedede;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .email-header {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .email-content {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .email-footer {
+    font-size: 14px;
+    text-align: center;
+    padding-top: 20px;
+    color: #888;
+  }
+  .email-button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #008000;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+</style>
+</head>
+<body>
+  <div class="email-container">
+    <div class="email-header">
+      <img src="https://louison-masseuse.com/assets/image/logo.png" alt="Logo de la Compagnie" width="150">
+    </div>
+    <div class="email-content">
+      <p>Bonjour {{receivedName}},</p>
+      <p>Nous avons le plaisir de vous annoncer que vous venez de recevoir une carte cadeaux de la part de {{senderName}} </p> 
+      <p>Votre Carte Cadeau est {{name}}. Vous trouverez en pièce jointe votre carte, prête à être utilisée.</p>
+      <p>Cette carte est valable 1 an à partir du {{date}} et vous offre un moment de bien-être à savourer chez vous ou dans mon institut sur Hendaye.</p>
+      <p>Si vous avez des questions et pour reserver votre moment de détente, n'hésitez pas à contacter Louison Haas au 06 22 69 03 37.</p>
+    </div>
+    <div class="email-footer">
+      <p>Les cartes cadeaux ne comprennent pas les déplacements pour toutes prestations à domicile.</p>
+      <p>Merci de votre confiance et à très bientôt !</p>
+    </div>
+  </div>
+</body>
+</html>

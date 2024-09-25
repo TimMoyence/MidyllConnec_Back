@@ -1,0 +1,59 @@
+{
+  "name": "louison-masseuse-energiticienne",
+  "version": "1.0.0",
+  "description": "Site web de Louison Masseuse Energiticienne revendiquand les services et les produits mis en place et reservable par contact avec Louison",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**/count/**",
+      "**/counterVisit.json"
+    ]
+  },
+  "scripts": {
+    "dev": "DEBUG=mydillConnect:* nodemon index.js",
+    "resetDB": "DEBUG=* sqitch revert; sqitch deploy; sqitch verify",
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
+    "initDb": "DEBUG=* psql -d mydillconnect -U Tim -f ./data/deploy/createTable.sql; psql -d mydillconnect -U Tim -f ./data/deploy/createTrigger.sql;",
+    "PqslResetDB": "DEBUG=* psql -d mydillconnect -U Tim -f ./data/revert/createTable.sql; psql -d mydillconnect -U Tim -f ./data/revert/createTrigger.sql; psql -d mydillconnect -U Tim -f ./data/deploy/createTable.sql; psql -d mydillconnect -U Tim -f ./data/deploy/createTrigger.sql; psql -d mydillconnect -U Tim -f ./data/verify/createTable.sql; psql -d mydillconnect -U Tim -f ./data/verify/createTrigger.sql;"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.54.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jest": "^27.2.3",
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "connect-pg-simple": "^9.0.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "debug": "^4.3.4",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-jsdoc-swagger": "^1.8.0",
+    "express-session": "^1.17.3",
+    "handlebars": "^4.7.8",
+    "joi": "^17.10.2",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.7",
+    "nodemon": "^3.0.1",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.1",
+    "passport-local": "^1.0.0",
+    "pg": "^8.11.3",
+    "puppeteer": "^22.3.0",
+    "stripe": "^14.19.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0",
+    "winston": "^3.10.0"
+  }
+}

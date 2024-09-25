@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gift Card</title>
+<style type="text/css">
+  body {
+    font-family: fantasy;
+    background-color: #fff;
+    color: rgb(7, 52, 27);
+    margin: 0;
+    padding: 0;
+  }
+  .gift-card-border {
+    border: 2px solid rgb(153, 153, 153);
+    width: 719px;
+    text-align: center;
+    margin: 20px auto;
+  }
+.gift-card-image img {
+  display: block; 
+  margin: auto; 
+  border-bottom: 2px solid rgba(153, 153, 153, 0.591); 
+  box-shadow: 0px 25px 25px -18px rgba(0, 0, 0, 0.608); 
+}
+
+  .gift-card h1 {
+    font-size: 3rem;
+    margin-bottom: 0;
+    margin-top: 20px;
+  }
+  .gift-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    margin-top: 0;
+  }
+  .gift-card p {
+    font-size: 1rem;
+    font-style: italic;
+    margin: 0;
+  }
+  .gift-card-content {
+    padding: 1rem;
+  }
+  .background {
+    background-image: url("https://louison-masseuse.com/assets/image/logo.png");
+    background-repeat: no-repeat;
+    background-position-x: 10%;
+    background-size: 23%;
+  }
+  .gift-card-footer {
+    padding: 0.5rem;
+  }
+  .contact {
+    font-size: 1rem;
+  }
+  .contact-info {
+    font-size: 14px;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+  <div class="gift-card-border">
+    <div class="gift-card-image">
+      <img src="https://louison-masseuse.com/assets/image/giftCard/giftCard-card-img.jpeg" alt="image of the top represent a gift">
+    </div>
+    <div class="gift-card">
+      <h1>Carte Cadeau</h1>
+      <h4>{{name}}</h4>
+      <p>Soin à votre domicile ou dans mon cabinet sur Hendaye</p>
+    </div>
+    <div class="gift-card-content background">
+      <p>Pour un moment bien-être :</p>
+      <p>Offerte(s) à M./Mme <span id="recipient-name">{{receivedName}}</span></p>
+      <p>De la part de M./Mme <span id="giver-name">{{senderName}}</span></p>
+      <p>Valable 1 ans à partir de la date : <span id="validity-date">{{date}}</span></p>
+    </div>
+    <div class="gift-card-footer">
+      <p class="contact">Pour en profitez: contactez moi, Louison Haas, au 06 22 69 03 37</p>
+      <p class="contact-info">Les cartes cadeaux ne comprennent pas les déplacements pour toutes prestations à domicile</p>
+    </div>
+  </div>
+</body>
+</html>

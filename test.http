@@ -1,0 +1,481 @@
+######### ! ############################# 
+
+#! USERS
+
+######### ! ############################# 
+
+### ? Register User
+POST http://localhost:3000/api/register
+Content-Type: application/json
+
+{
+  "firstname": "test3",
+  "lastname": "Michel",
+  "email": "tim.moyence@outlook.fr",
+  "password": "Test1234!",
+  "role": "admin"
+}
+
+### ? Login User
+POST http://localhost:3000/api/login
+Content-Type: application/json
+
+{
+  "email": "tim.moyence@outlook.fr",
+  "password": "Test1234!"
+}
+
+### ? test protected route
+GET http://localhost:3000/protected-route
+Content-Type: application/json
+
+### Logout 
+GET http://localhost:3000/api/logout
+
+
+######### ! ############################# 
+
+#! Bracelets
+
+######### ! ############################# 
+
+### ? Get all bracelets
+GET http://localhost:3000/api/bracelets
+
+### ? Get one bracelet
+GET http://localhost:3000/api/bracelet/1
+
+### ? Create one bracelet
+POST http://localhost:3000/api/bracelet
+Content-Type: application/json
+
+{
+  "name" : "Bracelet Test avec Joi",
+  "description" : "le bracelet a tester pour voir si ça marche",
+  "prix" : 1000,
+  "categorie_id" : 1
+}
+
+### ? Update one bracelet
+PATCH http://localhost:3000/api/bracelet/2
+Content-Type: application/json
+
+{
+  "name" : "Bracelet Test Updaté",
+  "description" : "le bracelet a tester pour voir si ça marche et maintenant je l'ai updade une fois",
+  "prix" : 1000,
+  "categorie_id": 1
+}
+
+### ? Delete one bracelet
+DELETE http://localhost:3000/api/bracelet/4
+
+######### ! ############################# 
+
+#! Huiles
+
+######### ! ############################# 
+
+### ? Get All Huile
+GET http://localhost:3000/api/huiles
+
+### ? Get One Huile
+GET http://localhost:3000/api/huile/1
+
+### ? Create One Huile 
+POST http://localhost:3000/api/huile
+Content-Type: application/json
+
+{
+  "name" : "Huile Test",
+  "description" : "l'huile a tester pour voir si ça marche",
+  "prix" : 1000,
+  "quantite": 25,
+  "categorie_id": 1
+}
+
+### ? Update One Huile
+PATCH http://localhost:3000/api/huile/2
+Content-Type: application/json
+
+{
+  "name" : "Huile Test Updaté",
+  "description" : "l'huile a tester pour voir si ça marche et maintenant je l'ai updade une fois",
+  "prix" : 100000,
+  "quantite": 250,
+  "categorie_id": 1
+}
+
+### ? Delete One Huile
+DELETE http://localhost:3000/api/huile/3
+
+######### ! ############################# 
+
+#! Bougies
+
+######### ! ############################# 
+
+### ? Get All Bougie
+GET http://localhost:3000/api/bougies
+
+### ? Get One Bougie
+GET http://localhost:3000/api/bougie/1
+
+### ? Create One Bougie
+POST http://localhost:3000/api/bougie
+Content-Type: application/json
+
+{
+  "name" : "Bougie Test frere",
+  "prix" : 1000,
+  "categorie_id": 1
+}
+
+### ? Update One Bougie
+PATCH http://localhost:3000/api/bougie/1
+Content-Type: application/json
+
+{
+  "name" : "Bougie Test Updaté",
+  "prix" : 100000,
+  "categorie_id": 1
+}
+
+### ? Delete One Bougie
+DELETE http://localhost:3000/api/bougie/2
+
+######### ! ############################# 
+
+#! Soin
+
+######### ! ############################# 
+
+### ? Get All Soin
+GET http://localhost:3000/api/soins
+
+### ? Get One Soin
+GET http://localhost:3000/api/soin/1
+
+### ? Create One Soin
+POST http://localhost:3000/api/soin
+Content-Type: application/json
+
+{
+  "name": "Test soin Create",
+  "short_description": "Test soin Create",
+  "description": "Test soin Create",
+  "temps": "3:00:00",
+  "prix": 100,
+  "categorie_id": 2
+}
+
+### ? Update One Soin
+PATCH http://localhost:3000/api/soin/2
+Content-Type: application/json
+
+{
+  "name": "Test soin Update",
+  "short_description": "Test soin Update",
+  "description": "Test soin Create" ,
+  "temps": "4:00:00",
+  "prix": 100,
+  "categorie_id": 2
+}
+
+### ? Delete One Soin
+DELETE http://localhost:3000/api/soin/2
+
+######### ! ############################# 
+
+#! Forfait
+
+######### ! ############################# 
+
+### ? Get All Forfait
+GET http://localhost:3000/api/forfaits
+
+### ? Get One Forfait
+GET http://localhost:3000/api/forfait/1
+
+### ? Create One Forfait
+POST http://localhost:3000/api/forfait
+Content-Type: application/json
+
+{
+  "name": "Test forfait Create",
+  "description": "Test forfait Create",
+  "temps": "3:00:00",
+  "prix": 100,
+  "categorie_id": 2
+}
+
+### ? Update One Forfait
+PATCH http://localhost:3000/api/forfait/7
+Content-Type: application/json
+
+{
+  "name": "Test forfait Update",
+  "description": "Test forfait Create" ,
+  "temps": "4:00:00",
+  "prix": 100,
+  "categorie_id": 2
+}
+
+### ? Delete One Forfait
+DELETE http://localhost:3000/api/forfait/2
+
+######### ! ############################# 
+
+#! Category
+
+######### ! ############################# 
+
+### ? Get All Category
+GET http://localhost:3000/api/categories
+
+### ? Get One Category
+GET http://localhost:3000/api/categorie/1
+
+### ? Create One Category
+POST http://localhost:3000/api/categorie
+Content-Type: application/json
+
+{
+  "name": "Test categorie Create"
+}
+
+### ? Update One categorie
+PATCH http://localhost:3000/api/categorie/2
+Content-Type: application/json
+
+{
+  "name": "Test categorie Update"
+}
+
+### ? Delete One Category
+DELETE http://localhost:3000/api/categorie/3
+
+######### ! ############################# 
+
+#! Massage
+
+######### ! ############################# 
+
+### ? Get all Massages
+GET http://localhost:3000/api/massages
+
+### ? Get one Massage
+GET http://localhost:3000/api/massage/4
+
+### ? Create one Massage
+POST http://localhost:3000/api/massage
+Content-Type: application/json
+
+{
+  "name" : "massage Test avec Joi",
+  "short_description" : "le massage a tester pour voir si ça marche",
+  "title" : "le massage a tester pour voir si ça marche",
+  "description" : "le massage a tester pour voir si ça marche",
+  "temps": "3:00:00",
+  "prix" : 1000,
+  "categorie_id" : 2
+}
+
+### ? Update one Massage
+PATCH http://localhost:3000/api/massage/2
+Content-Type: application/json
+
+{
+  "name" : "massage Test Updaté",
+  "description" : "le massage a tester pour voir si ça marche et maintenant je l'ai updade une fois",
+  "prix" : 1000,
+  "categorie_id": 1,
+  "benefits": ["Renforcement système immunitaire", "Renforce", "Elimine", "Maux de tête", "Sommeil", "Angoisse"]
+}
+
+### ? Delete one Massage
+DELETE http://localhost:3000/api/massage/8
+
+######### ! ############################# 
+
+#! avis
+
+######### ! ############################# 
+
+### ? Get all avis
+GET http://localhost:3000/api/avis
+
+### ? Get one avis
+GET http://localhost:3000/api/avis/valide/2
+
+### ? Get All avis invalid
+GET http://localhost:3000/api/avis/false
+
+### ? Create one avis
+POST http://localhost:3000/api/avis
+Content-Type: application/json
+
+{
+  "name" : "avis Test 23",
+  "text" : "le avis a tester pour voir si ça marche et maintenant je l'ai updade une fois",
+  "rating" : 5,
+  "admin_validation" : false
+}
+
+### ? Update one avis
+PATCH http://localhost:3000/api/avis/1
+Content-Type: application/json
+
+{
+  "admin_validation" : true
+}
+
+### ? Delete one avis
+DELETE http://localhost:3000/api/avis/4
+
+
+######### ! ############################# 
+
+#! bienfait
+
+######### ! ############################# 
+
+### ? Get all bienfait
+GET http://localhost:3000/api/bienfaits
+
+### ? Get one bienfait
+GET http://localhost:3000/api/bienfait/2
+
+### ? Create link between bienfait and massage
+POST http://localhost:3000/api/bienfait/massage
+Content-Type: application/json
+
+{
+  "huile_id" : 1,
+  "bienfait_id" : 2
+}
+
+### ? Create one bienfait
+POST http://localhost:3000/api/bienfait
+Content-Type: application/json
+
+{
+  "name" : "bienfait Test 23"
+}
+
+### ? Update one bienfait
+PATCH http://localhost:3000/api/bienfait/27
+Content-Type: application/json
+
+{
+  "name" : "bienfait Update Test 23"
+}
+
+### ? Delete one bienfait
+DELETE http://localhost:3000/api/bienfait/26
+
+######### ! ############################# 
+
+#! pierre
+
+######### ! ############################# 
+
+### ? Get all pierre
+GET http://localhost:3000/api/pierres
+
+### ? Get one pierre
+GET http://localhost:3000/api/pierre/2
+
+### ? Create link between pierre and bracelet
+POST http://localhost:3000/api/pierre/bracelet
+Content-Type: application/json
+
+{
+  "bracelet_id" : 1,
+  "pierre_id" : 2
+}
+
+### ? Create one pierre
+POST http://localhost:3000/api/pierre
+Content-Type: application/json
+
+{
+  "name" : "pierre Test 23"
+}
+
+### ? Update one pierre
+PATCH http://localhost:3000/api/pierre/4
+Content-Type: application/json
+
+{
+  "name" : "pierre Update Test 23"
+}
+
+### ? Delete one pierre
+DELETE http://localhost:3000/api/pierre/10
+
+######### ! ############################# 
+
+#! programme
+
+######### ! ############################# 
+
+### ? Get all programme
+GET http://localhost:3000/api/programmes
+
+### ? Get one programme
+GET http://localhost:3000/api/programme/1
+
+### ? Create link between programme and bracelet
+POST http://localhost:3000/api/programme/bracelet
+Content-Type: application/json
+
+{
+  "bracelet_id" : 1,
+  "programme_id" : 2
+}
+
+### ? Create one programme
+POST http://localhost:3000/api/programme
+Content-Type: application/json
+
+{
+  "name" : "programme Test 23"
+}
+
+### ? Update one programme
+PATCH http://localhost:3000/api/programme/4
+Content-Type: application/json
+
+{
+  "name" : "programme Update Test 23"
+}
+
+### ? Delete one programme
+DELETE http://localhost:3000/api/programme/10
+
+######### ! ############################# 
+
+#! contact
+
+######### ! ############################# ##
+# ? Create one contact
+POST http://localhost:3000/api/contact
+Content-Type: application/json
+
+{
+  "firstname" : "Michou",
+  "lastname" : "Le dragon",
+  "email" : "testdu33@gmail.com",
+  "phone" : "0650232529",
+  "message" : "Test de contact"
+}
+
+######### ! ############################# 
+
+#! gift Card
+
+######### ! ############################# ##
+
+### ? Get all gift card
+GET http://localhost:3000/api/gift-card
