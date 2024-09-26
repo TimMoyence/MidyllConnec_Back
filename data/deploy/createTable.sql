@@ -17,8 +17,8 @@ CREATE TABLE Equipment (
     equipment_id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     description TEXT,
+    state TEXT NOT NULL CHECK (state IN ('Neuf', 'Usée', 'cassés')),
     category TEXT NOT NULL CHECK (category IN ('Ordinateurs portables', 'Projecteurs', 'Imprimantes', 'Scanner', 'Stations de travail fixes', 'Serveurs', 'Périphériques de stockage (disques durs externes, clés USB)', 'Câbles et adaptateurs', 'Caméras / Webcams', 'Batteries portables / Chargeurs')),
-    availability BOOLEAN DEFAULT TRUE
 );
 
 -- Table des réservations effectuées par les utilisateurs
@@ -29,9 +29,12 @@ CREATE TABLE Reservations (
     reservation_date DATE NOT NULL,
     return_date DATE,
     status TEXT DEFAULT 'reserved' CHECK (status IN ('reserved', 'returned', 'canceled')),
+    equipment_state_at_reservation TEXT, -- New column for equipment state at reservation
+    equipment_state_at_return TEXT,      -- New column for equipment state at return
     FOREIGN KEY (user_id) REFERENCES admin_user(id),
     FOREIGN KEY (equipment_id) REFERENCES Equipment(equipment_id)
 );
+
 
 -- Table pour gérer l'historique des réservations
 CREATE TABLE ReservationHistory (
@@ -39,8 +42,10 @@ CREATE TABLE ReservationHistory (
     reservation_id INT NOT NULL,
     action TEXT CHECK (action IN ('reserved', 'returned', 'canceled')),
     action_date TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
+    equipment_state TEXT, -- New column for equipment state at the moment of the action
     FOREIGN KEY (reservation_id) REFERENCES Reservations(reservation_id)
 );
+
 
 CREATE TABLE IF NOT EXISTS "session" (
     "sid" VARCHAR NOT NULL COLLATE "default",

@@ -8,6 +8,7 @@ import * as schemaPost from '../schemas/app.post.schema.js';
 import adminRouter from './admin.router.js';
 import authRouter from './auth.router.js';
 import equipmentRouter from './equipment.router.js';
+import reservationRouter from './reservation.router.js';
 
 const debug = Debug('mydillConnect:router:index');
 
@@ -35,6 +36,7 @@ router.post(
 router.use(adminRouter);
 router.use(authRouter);
 router.use(equipmentRouter);
+router.use(reservationRouter);
 
 router.use((_, __, next) => {
   next(new NotFoundError('404 not found'));

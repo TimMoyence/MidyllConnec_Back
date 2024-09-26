@@ -15,12 +15,8 @@ export default class EquipmentController extends CoreController {
 
   async getEquipmentByCategory(req, res) {
     const category = req.params.category;
-    console.log('salut', category)
-    
     const equipments = await EquipmentDataMapper.getByCategory(category); 
     
-    console.log('je suis l equipement', equipments)
-
     if (equipments.length > 0) {
       res.status(200).json(equipments); 
     } else {

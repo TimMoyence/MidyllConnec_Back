@@ -9,7 +9,24 @@ export default class EquipmentDataMapper extends CoreDataMapper {
   
   async getByCategory(category){
     const preparedQuery = {
-      text: `SELECT * FROM equipment WHERE category = $1`,
+      text: `SELECT * FROM 
+          Equipment e
+      LEFT JOIN LATERAL (
+          SELECT 
+              status,
+              reservation_date,
+              return_date
+          FROM 
+              Reservations r
+          WHERE 
+              r.equipment_id = e.equipment_id
+          ORDER BY 
+              r.reservation_date DESC
+          LIMIT 1
+      ) r ON TRUE
+      WHERE 
+          e.category = $1; -- Replace $1 with the desired category parameter
+      `,
       values: [category],
     };
     const result = await client.query(preparedQuery);
