@@ -37,7 +37,7 @@ INSERT INTO equipment (name, description, category) VALUES
 ('HP AIR & LIEGEUR', 'Imprimante tout support', 'Imprimantes'),
 ('HP KIZ ARU', 'Scanner très grande vitesse pour documents et photos', 'Scanner'),
 ('HP BA GY', 'Scanner de grande entreprises', 'Scanner'),
-('MSI RAW POWER ', 'Station de travail fixe puissante', 'Stations de travail fixes'),
+('MSI RAW POWER', 'Station de travail fixe puissante', 'Stations de travail fixes'),
 ('INT PRO X9', 'Station de travail fixe haute performance', 'Stations de travail fixes'),
 ('MC PRO MAX BOOST', 'Serveur rackable TRÈS haute performance', 'Serveurs'),
 ('HP ProLight', 'Serveur rackable grande capacité', 'Serveurs'),
