@@ -2,14 +2,14 @@
 
 BEGIN;
 
--- Seeder for Users table
-INSERT INTO Users (username, email, password, role) VALUES
-('john_doe', 'john.doe@example.com', 'Test123456!', 'student'),
-('jane_smith', 'jane.smith@example.com', 'Test123456!', 'staff'),
-('admin_user', 'admin@example.com', 'Test123456!', 'admin');
+-- Seeder for admin-user table
+INSERT INTO admin_user (firstname, lastname, email, password, role) VALUES
+('john', 'doe', 'john.doe@example.com', 'Test123456!', 'student'),
+('jane', 'smith', 'jane.smith@example.com', 'Test123456!', 'staff'),
+('admin', 'user', 'admin@example.com', 'Test123456!', 'admin');
 
 -- Seeder for Equipment table
-INSERT INTO Equipment (name, description, category, availability) VALUES
+INSERT INTO equipment (name, description, category, availability) VALUES
 ('HP EliteBook 840', 'Ordinateur portable pour le développement et la bureautique', 'Ordinateurs portables', TRUE),
 ('Dell XPS 13', 'Ordinateur portable léger et puissant', 'Ordinateurs portables', TRUE),
 ('BenQ MW632ST', 'Projecteur courte focale 3D', 'Projecteurs', TRUE),

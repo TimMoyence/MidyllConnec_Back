@@ -22,7 +22,7 @@ export default {
     const result = await client.query('SELECT * FROM "admin_user" WHERE id = $1', [
       id,
     ]);
-    return result.rows[0];
+      return result.rows[0];
   },
 
   async getUserByEmail(email) {

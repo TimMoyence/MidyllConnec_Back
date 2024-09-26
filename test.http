@@ -30,7 +30,7 @@ GET http://localhost:3000/protected-route
 Content-Type: application/json
 
 ### Logout 
-GET http://localhost:3000/api/logout
+GET http://localhost:3000/api/equipment/category/Projecteurs
 
 
 ######### ! ############################# 

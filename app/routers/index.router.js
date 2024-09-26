@@ -7,6 +7,7 @@ import validation from '../middlewares/validation.middleware.js';
 import * as schemaPost from '../schemas/app.post.schema.js';
 import adminRouter from './admin.router.js';
 import authRouter from './auth.router.js';
+import equipmentRouter from './equipment.router.js';
 
 const debug = Debug('mydillConnect:router:index');
 
@@ -33,6 +34,7 @@ router.post(
 
 router.use(adminRouter);
 router.use(authRouter);
+router.use(equipmentRouter);
 
 router.use((_, __, next) => {
   next(new NotFoundError('404 not found'));
