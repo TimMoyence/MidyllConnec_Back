@@ -17,8 +17,8 @@ CREATE TABLE Equipment (
     equipment_id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     description TEXT,
-    state TEXT NOT NULL CHECK (state IN ('Neuf', 'Usée', 'cassés')),
-    category TEXT NOT NULL CHECK (category IN ('Ordinateurs portables', 'Projecteurs', 'Imprimantes', 'Scanner', 'Stations de travail fixes', 'Serveurs', 'Périphériques de stockage (disques durs externes, clés USB)', 'Câbles et adaptateurs', 'Caméras / Webcams', 'Batteries portables / Chargeurs')),
+    state TEXT NOT NULL DEFAULT 'Neuf' CHECK (state IN ('Neuf', 'Usée', 'cassés')),
+    category TEXT NOT NULL CHECK (category IN ('Ordinateurs portables', 'Projecteurs', 'Imprimantes', 'Scanner', 'Stations de travail fixes', 'Serveurs', 'Périphériques de stockage', 'Câbles et adaptateurs', 'Caméras - Webcams', 'Batteries portables - Chargeurs'))
 );
 
 -- Table des réservations effectuées par les utilisateurs
