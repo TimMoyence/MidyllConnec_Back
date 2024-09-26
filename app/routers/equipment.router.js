@@ -2,8 +2,6 @@ import Debug from 'debug';
 import { Router } from 'express';
 import EquipmentController from '../controllers/equipment.controller.js';
 import controllerWrapper from '../middlewares/controller.wrapper.js';
-import validation from '../middlewares/validation.middleware.js';
-import schemaGet from '../schemas/app.get.schema.js';
 
 
 const debug = Debug('mydillConnect:router:equipment');
@@ -23,8 +21,7 @@ equipmentRouter.get(
 
 equipmentRouter.get(
   '/api/equipment/:id',
-  validation(schemaGet, 'query'),
-  controllerWrapper(equipmentController.getById.bind(equipmentController)),
+  controllerWrapper(equipmentController.getEquipmentById.bind(equipmentController)),
 );
 
 

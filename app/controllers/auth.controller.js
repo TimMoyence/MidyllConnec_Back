@@ -66,7 +66,6 @@ export default {
 
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
     
-    console.log(req.body);
     
     const userData = {
       firstname: req.body.firstname,

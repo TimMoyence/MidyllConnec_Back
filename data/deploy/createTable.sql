@@ -28,7 +28,7 @@ CREATE TABLE Reservations (
     equipment_id INT NOT NULL,
     reservation_date DATE NOT NULL,
     return_date DATE,
-    status TEXT DEFAULT 'reserved' CHECK (status IN ('reserved', 'returned', 'canceled')),
+    status TEXT DEFAULT 'returned' CHECK (status IN ('reserved', 'returned', 'canceled')),
     equipment_state_at_reservation TEXT, -- New column for equipment state at reservation
     equipment_state_at_return TEXT,      -- New column for equipment state at return
     FOREIGN KEY (user_id) REFERENCES admin_user(id),

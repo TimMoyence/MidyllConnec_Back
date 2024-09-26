@@ -7,13 +7,13 @@ const reservationController = new ReservationController();
 
 // Route to create a reservation
 reservationRouter.post(
-  '/reservation/:equipment_id',
+  '/api/reservation/:equipment_id',
   controllerWrapper(reservationController.createReservation.bind(reservationController))
 );
 
 // Route to update a reservation (return or cancel)
 reservationRouter.put(
-  '/reservation/:reservation_id',
+  '/api/reservation/:reservation_id',
   controllerWrapper(reservationController.updateReservation.bind(reservationController))
 );
 

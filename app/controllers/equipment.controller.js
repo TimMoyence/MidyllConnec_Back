@@ -13,6 +13,12 @@ export default class EquipmentController extends CoreController {
       debug('equipmentDataMapper constructor');
     }
 
+    async getEquipmentById(req, res) {
+    const id = req.params.id;
+    const equipment = await EquipmentDataMapper.getEquipmentById(id);
+    res.json(equipment);
+  }
+
   async getEquipmentByCategory(req, res) {
     const category = req.params.category;
     const equipments = await EquipmentDataMapper.getByCategory(category); 

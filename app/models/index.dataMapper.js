@@ -42,7 +42,6 @@ export default class DataMapper {
     if (data.benefits) {
       const dataWhitBenefits = data.benefits;
       const allBenefits = await client.query('SELECT * FROM benefit');
-      console.log(allBenefits);
       const query = {
         text: `DELETE FROM ${this.constructor.liaisonTable} WHERE massage_id = $1`,
         values: [id],
@@ -51,7 +50,6 @@ export default class DataMapper {
       dataWhitBenefits.forEach((benefit) => {
         const benefitExist = allBenefits.rows.find((b) => b.name === benefit);
         if (benefitExist) {
-          console.log(benefitExist);
           this.updateBenefits(id, benefitExist.id);
         }
       });
@@ -84,7 +82,6 @@ export default class DataMapper {
       values: [id, data],
     };
     const result = await client.query(query2);
-    console.log(query2);
     return 'Update Ok';
   }
 

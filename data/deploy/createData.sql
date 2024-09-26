@@ -65,8 +65,8 @@ INSERT INTO Reservations (user_id, equipment_id, reservation_date, return_date, 
 (2, 16, '2024-09-27', '2024-10-01', 'reserved'),
 (3, 18, '2024-09-28', '2024-10-02', 'reserved'),
 (3, 20, '2024-09-29', '2024-10-03', 'reserved'),
-(1, 4, '2024-09-25', NULL, 'reserved'),
-(2, 4, '2024-09-26', NULL, 'reserved'),
+(1, 4, '2024-09-25', '2024-10-03', 'reserved'),
+(2, 4, '2024-09-26', '2024-10-03', 'reserved'),
 (1, 2, '2024-09-26', '2024-09-29', 'reserved'),
 (2, 3, '2024-09-20', '2024-09-24', 'reserved'),
 (2, 5, '2024-09-21', '2024-09-25', 'reserved'),
@@ -78,7 +78,7 @@ INSERT INTO Reservations (user_id, equipment_id, reservation_date, return_date, 
 (2, 16, '2024-09-27', '2024-10-01', 'reserved'),
 (3, 18, '2024-09-28', '2024-10-02', 'reserved'),
 (3, 20, '2024-09-29', '2024-10-03', 'reserved'),
-(1, 4, '2024-09-25', NULL, 'reserved'),
+(1, 4, '2024-09-25', '2024-10-03', 'reserved'),
 (1, 7, '2024-09-20', '2024-09-24', 'returned'),
 (1, 2, '2024-09-26', '2024-09-29', 'reserved'),
 (2, 3, '2024-09-20', '2024-09-24', 'reserved'),
@@ -91,7 +91,7 @@ INSERT INTO Reservations (user_id, equipment_id, reservation_date, return_date, 
 (2, 16, '2024-09-27', '2024-10-01', 'reserved'),
 (3, 18, '2024-09-28', '2024-10-02', 'reserved'),
 (3, 20, '2024-09-29', '2024-10-03', 'reserved'),
-(1, 4, '2024-09-25', NULL, 'reserved');
+(1, 4, '2024-09-25', '2024-10-03', 'reserved');
 
 -- Seeder for ReservationHistory table
 INSERT INTO ReservationHistory (reservation_id, action, action_date) VALUES
