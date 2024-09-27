@@ -16,7 +16,8 @@ const app = express();
 
 app.use(cookieParser());
 
-const allowedOrigins = process.env.CORSORIGIN.split(',');
+const corsOriginString = "http://localhost:4200,http://localhost:4000"
+const allowedOrigins = corsOriginString.split(',');
 
 const corsOptionsDelegate = (req, callback) => {
   let corsOptions;
