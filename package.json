@@ -17,7 +17,7 @@
     "dev": "DEBUG=mydillConnect:* nodemon index.js",
     "resetDB": "DEBUG=* sqitch revert; sqitch deploy; sqitch verify",
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
-    "initDbBastien": "DEBUG=* psql -d mydillconnect -U postgres -f ./data/deploy/createTable.sql; psql -d mydillconnect -U postgres -f ./data/deploy/createTrigger.sql;",
+    "initDbBastien": "DEBUG=* psql -d mydillconnect -U postgres -f ./data/deploy/createTable.sql; psql -d mydillconnect -U postgres -f ./data/deploy/createTrigger.sql;psql -d mydillconnect -U postgres -f ./data/deploy/createData.sql;",
     "initDb": "DEBUG=* psql -d mydillconnect -U Tim -f ./data/deploy/createTable.sql; psql -d mydillconnect -U Tim -f ./data/deploy/createTrigger.sql; psql -d mydillconnect -U Tim -f ./data/deploy/createData.sql;",
     "PqslResetDB": "DEBUG=* psql -d mydillconnect -U Tim -f ./data/revert/createTable.sql; psql -d mydillconnect -U Tim -f ./data/revert/createTrigger.sql; psql -d mydillconnect -U Tim -f ./data/deploy/createTable.sql; psql -d mydillconnect -U Tim -f ./data/deploy/createTrigger.sql; psql -d mydillconnect -U Tim -f ./data/verify/createTable.sql; psql -d mydillconnect -U Tim -f ./data/verify/createTrigger.sql;"
   },
