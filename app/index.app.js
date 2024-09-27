@@ -16,7 +16,7 @@ const app = express();
 
 app.use(cookieParser());
 
-const corsOriginString = "http://localhost:4200,http://localhost:4000"
+const corsOriginString = "http://localhost:4200,http://localhost:4000,http://mydil.rph.red"
 const allowedOrigins = corsOriginString.split(',');
 
 const corsOptionsDelegate = (req, callback) => {
