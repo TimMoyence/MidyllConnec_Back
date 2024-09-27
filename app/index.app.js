@@ -16,8 +16,7 @@ const app = express();
 
 app.use(cookieParser());
 
-const corsOriginString = "http://localhost:4200,http://localhost:4000,http://mydil.rph.red,https://tmoyence.fr,http://tmoyence.fr,https://tmoyence.fr/admin/login "
-const allowedOrigins = corsOriginString.split(',');
+const allowedOrigins = process.env.CORSORIGIN.split(',');
 
 const corsOptionsDelegate = (req, callback) => {
   let corsOptions;
